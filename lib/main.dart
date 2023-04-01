@@ -11,8 +11,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        textTheme: TextTheme(
+            bodyMedium: TextStyle(
+          fontFamily: "Arial",
+          fontSize: 15,
+          color: Colors.pink,
+        )),
+      ),
       home: Scaffold(
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.black,
 
         resizeToAvoidBottomInset: false,
         appBar: AppBar(
@@ -28,6 +37,7 @@ class MyApp extends StatelessWidget {
           foregroundColor: Colors.white,
           backgroundColor: Colors.black,
         ),
+
 //fim da barra
         body: SingleChildScrollView(
           child: Center(
@@ -36,6 +46,9 @@ class MyApp extends StatelessWidget {
                 Image(
                   width: 1000,
                   image: AssetImage('assets/ainz.png'),
+                ),
+                Divider(
+                  height: 10.0,
                 ),
                 Center(
                   child: Container(
@@ -131,6 +144,9 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                 ),
+                Divider(
+                  height: 10.0,
+                ),
                 Text(
                   "About",
                   style: TextStyle(
@@ -144,6 +160,7 @@ class MyApp extends StatelessWidget {
                     children: [
                       Text(
                         "''main protagonist of the Overlord series,",
+                        textAlign: TextAlign.center,
                         style: TextStyle(
                           fontFamily: "roboto",
                           fontSize: 25,
@@ -151,6 +168,7 @@ class MyApp extends StatelessWidget {
                       ),
                       Text(
                         "He is the guildmaster of Ainz Ooal Gown,",
+                        textAlign: TextAlign.center,
                         style: TextStyle(
                           fontFamily: "roboto",
                           fontSize: 25,
@@ -158,6 +176,7 @@ class MyApp extends StatelessWidget {
                       ),
                       Text(
                         "Overlord of the Great Tomb of Nazarick,",
+                        textAlign: TextAlign.center,
                         style: TextStyle(
                           fontFamily: "roboto",
                           fontSize: 25,
@@ -165,6 +184,7 @@ class MyApp extends StatelessWidget {
                       ),
                       Text(
                         "and the creator of Pandora's Actor,",
+                        textAlign: TextAlign.center,
                         style: TextStyle(
                           fontFamily: "roboto",
                           fontSize: 25,
@@ -172,6 +192,7 @@ class MyApp extends StatelessWidget {
                       ),
                       Text(
                         "Highest of the Almighty Forty One Supreme Beings.''",
+                        textAlign: TextAlign.center,
                         style: TextStyle(
                           fontFamily: "roboto",
                           fontSize: 20,
@@ -179,6 +200,9 @@ class MyApp extends StatelessWidget {
                       ),
                     ],
                   ),
+                ),
+                Divider(
+                  height: 10.0,
                 ),
                 Text(
                   "Habilities",
@@ -189,6 +213,7 @@ class MyApp extends StatelessWidget {
                   ),
                 ),
                 Container(
+                  padding: EdgeInsets.all(20),
                   alignment: Alignment.center,
                   child: Row(
                     children: [
@@ -196,20 +221,6 @@ class MyApp extends StatelessWidget {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            ElevatedButton.icon(
-                              onPressed: () {},
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: Colors.purple,
-                                foregroundColor: Colors.white,
-                              ),
-                              icon: Icon(
-                                // <-- Icon
-                                Icons.person_add,
-                                size: 24.0,
-                              ),
-                              label: Text('Create Undead'),
-                              // <-- Text
-                            ),
                             ElevatedButton.icon(
                               onPressed: () {},
                               style: ElevatedButton.styleFrom(
@@ -243,6 +254,24 @@ class MyApp extends StatelessWidget {
                       ),
                     ],
                   ),
+                ),
+              ],
+            ),
+          ),
+        ),
+        drawer: Drawer(
+          child: Container(
+            color: Colors.black,
+            height: 50,
+            child: ListView(
+              children: [
+                ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.purple,
+                    foregroundColor: Colors.white,
+                  ),
+                  child: Text("Test"),
                 ),
               ],
             ),
