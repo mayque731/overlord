@@ -22,16 +22,6 @@ class Conteudo extends StatelessWidget {
         ),
       ),
       home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.black,
-          title: const Text(
-            "Personagens",
-            style: TextStyle(
-              fontFamily: "roboto",
-              fontSize: 30,
-            ),
-          ),
-        ),
         body: Center(
           child: TextButton(
             onPressed: () {},
