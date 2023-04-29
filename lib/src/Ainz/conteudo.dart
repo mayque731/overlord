@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hocon/src/Ainz/galeria.dart';
-import 'ainz.dart';
+import './galeria.dart';
+import './ainz.dart';
 
 //tela que apresenta as duas abas de conteudo
 
