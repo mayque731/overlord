@@ -10,18 +10,20 @@ class Conteudo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         brightness: Brightness.dark,
         textTheme: TextTheme(
-            bodyMedium: TextStyle(
-          fontFamily: "Arial",
-          fontSize: 15,
-          color: Colors.pink,
-        )),
+          bodyMedium: TextStyle(
+            fontFamily: "Arial",
+            fontSize: 15,
+            color: Colors.pink,
+          ),
+        ),
       ),
       home: Scaffold(
         appBar: AppBar(
-//inicio da barra
+          backgroundColor: Colors.black,
           title: const Text(
             "Personagens",
             style: TextStyle(
@@ -37,6 +39,7 @@ class Conteudo extends StatelessWidget {
               length: 2,
               child: Scaffold(
                 appBar: AppBar(
+                  backgroundColor: Colors.black,
                   title: const Text("Conteudo"),
                   centerTitle: true,
                   bottom: const TabBar(

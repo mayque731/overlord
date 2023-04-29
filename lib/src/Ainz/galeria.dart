@@ -8,6 +8,7 @@ class Galeria extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         brightness: Brightness.dark,
         textTheme: TextTheme(
@@ -18,19 +19,35 @@ class Galeria extends StatelessWidget {
         )),
       ),
       home: Scaffold(
-        appBar: AppBar(
-//inicio da barra
-          title: const Text(
-            "Personagens",
-            style: TextStyle(
-              fontFamily: "roboto",
-              fontSize: 30,
+        backgroundColor: Colors.black,
+        body: GridView.count(
+          crossAxisCount: 2,
+          children: [
+            TextButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/conteudo');
+              },
+              child: Container(
+                color: Colors.amber,
+              ),
             ),
-          ),
-        ),
-        body: Center(
-          //gridview com as fotos dos personagens
-          child: Text("galeria"),
+            TextButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/conteudo');
+              },
+              child: Container(
+                color: Colors.blue,
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/conteudo');
+              },
+              child: Container(
+                color: Colors.green,
+              ),
+            ),
+          ],
         ),
       ),
     );

@@ -10,6 +10,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         brightness: Brightness.dark,
         textTheme: TextTheme(
@@ -20,8 +21,9 @@ class Home extends StatelessWidget {
         )),
       ),
       home: Scaffold(
+        backgroundColor: Colors.black,
         appBar: AppBar(
-//inicio da barra
+          backgroundColor: Colors.black,
           title: const Text(
             "Personagens",
             style: TextStyle(
