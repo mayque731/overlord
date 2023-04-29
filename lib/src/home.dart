@@ -30,9 +30,18 @@ class Home extends StatelessWidget {
             ),
           ),
         ),
-        body: Center(
-          //gridview com os personagens
-          child: Text("teste"),
+        body: GridView.count(
+          crossAxisCount: 2,
+          children: [
+            TextButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/conteudo');
+              },
+              child: Container(
+                color: Colors.amber,
+              ),
+            ),
+          ],
         ),
       ),
     );

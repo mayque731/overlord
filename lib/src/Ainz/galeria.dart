@@ -29,8 +29,9 @@ class Galeria extends StatelessWidget {
           ),
         ),
         body: Center(
-            //gridview com as fotos dos personagens
-            ),
+          //gridview com as fotos dos personagens
+          child: Text("galeria"),
+        ),
       ),
     );
   }
